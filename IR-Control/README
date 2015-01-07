@@ -1,0 +1,25 @@
+1.
+/etc/modules:
+lirc_dev
+lirc_rpi gpio_in_pin=4 gpio_out_pin=17
+
+2.
+Test IR receiver:
+sudo mode2 -d /dev/lirc0
+
+3.
+Generate config from your Remote Control
+sudo irrecord tv.conf
+
+4.
+Test IR transmitter
+irsend SEND_ONCE TV KEY_POWER
+
+Enjoy!
+
+ircat test util for ~/.lircrc
+
+Links:
+http://habrahabr.ru/post/193572/
+http://www.bog.pp.ru/work/lirc.html
+ 
